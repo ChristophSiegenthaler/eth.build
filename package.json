@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://ethbuild.uniswap.ch/",
-  "devDependencies": {
-    "@babel/core": "^7.9.6"
-  },
   "dependencies": {
     "3box": "^1.18.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
