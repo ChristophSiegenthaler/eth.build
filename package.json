@@ -20,6 +20,7 @@
     "burner-provider": "^1.0.6",
     "chart.js": "^2.9.3",
     "chess": "^0.4.2",
+    "coingecko-api": "^1.0.10",
     "color-mixer": "^1.0.0",
     "dapparatus": "^1.0.96",
     "eth-crypto": "^1.5.0",

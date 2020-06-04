@@ -1,6 +1,9 @@
-const axios = require('axios');
+const CoinGecko = require('coingecko-api');
+const CoinGeckoClient = new CoinGecko();
 
-const url = "https://network.eth.build:44386/price?symbol="
+var func = async() => {
+  let data = await CoinGeckoClient.ping();
+};
 
 function Price() {
   this.addInput("[symbol]","string")
@@ -18,18 +21,12 @@ Price.prototype.onAdded = async function() {
   this.loadPrice()
 }
 
-
 Price.prototype.loadPrice = async function() {
   try{
-    //get price
     let result = await axios.get(url+this.symbol)
-    //console.log("result",result)
     if(result && result.data){
       for(let i in result.data){
         console.log("PRICE DATA",result.data[i])
-        /*if(result.data[i].symbol.toLowerCase()==this.symbol.toLowerCase()){
-          this.value = result.data[i].price_usd
-        }*/
         try{
           this.value = result.data[i].quote.USD.price
         }catch(e){console.log(e)}
